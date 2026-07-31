@@ -1,10 +1,9 @@
 /* -------------------------------------------------------------
-   DR. EDUARDO COUTINHO - Interactive Dental Clinic Script
+   SILVEIRA ODONTOLOGIA - Minimalist Script
    ------------------------------------------------------------- */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. Mobile Menu Toggle
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -23,22 +22,5 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-
-    // 2. FAQ Accordion Toggle
-    const faqItems = document.querySelectorAll('.faq-item');
-
-    faqItems.forEach(item => {
-        const questionBtn = item.querySelector('.faq-question');
-        questionBtn.addEventListener('click', () => {
-            const isActive = item.classList.contains('active');
-            
-            // Close all others
-            faqItems.forEach(i => i.classList.remove('active'));
-
-            if (!isActive) {
-                item.classList.add('active');
-            }
-        });
-    });
 
 });
